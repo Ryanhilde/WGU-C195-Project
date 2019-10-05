@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.MainScreenController">
+   <children>
+      <Label fx:id="welcomeLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="14.0" prefHeight="63.0" prefWidth="115.0" text="Welcome!">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="optionsLabel" layoutX="14.0" layoutY="46.0" text="Please select from the options below" />
+      <Label fx:id="customerLabel" layoutX="14.0" layoutY="77.0" text="Customer">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="appointmentLabel" layoutX="14.0" layoutY="145.0" text="Appointments">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="reportLabel" layoutX="14.0" layoutY="223.0" text="Generate Reports">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="customerTableButton" layoutX="96.0" layoutY="77.0" mnemonicParsing="false" onAction="#customerTableHandler" text="View Customer List">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="appointmentTableButton" layoutX="128.0" layoutY="145.0" mnemonicParsing="false" onAction="#appointmentTableHandler" text="View Appointment List">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="customerLabel1" layoutX="14.0" layoutY="102.0" text="View a full record of customers in the database" />
+      <Label fx:id="appointmentLabel1" layoutX="14.0" layoutY="170.0" text="View a calender list of upcoming appointments" />
+      <Label fx:id="appointmentLabel2" layoutX="14.0" layoutY="187.0" text="The calendar displays associated customers and employee" />
+      <Label fx:id="customerLabel2" layoutX="14.0" layoutY="119.0" text="The database displays all customer information" />
+      <Button fx:id="exitButton" layoutX="322.0" layoutY="361.0" mnemonicParsing="false" onAction="#exitHandler" text="Exit" />
+      <Button fx:id="logoutButton" layoutX="248.0" layoutY="361.0" mnemonicParsing="false" onAction="#logoutHandler" text="Logout" />
+      <Button fx:id="reportTableButton" layoutX="158.0" layoutY="223.0" mnemonicParsing="false" onAction="#reportTableHandler" text="View Generated Reports">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="reportLabel1" layoutX="14.0" layoutY="248.0" text="View an updatable list of reports that include:" />
+      <Label fx:id="reportLabel2" layoutX="14.0" layoutY="265.0" text="1.) Number of appoint types by month" />
+      <Label fx:id="reportLabel3" layoutX="14.0" layoutY="282.0" text="2.) Schedule for each consultant" />
+      <Label fx:id="reportLabel4" layoutX="14.0" layoutY="299.0" text="3.) Number of appointments created this year" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.AppointmentScreenController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Appointment Manager">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="41.0" text="Please select how you would like to view the calendar" />
+      <HBox layoutX="318.0" layoutY="41.0" prefHeight="65.0" prefWidth="498.0">
+         <children>
+            <RadioButton fx:id="viewByMonthRadioButton" mnemonicParsing="false" onAction="#viewByMonthHandler" prefHeight="17.0" prefWidth="245.0" text="View upcoming appointments by month">
+               <toggleGroup>
+                  <ToggleGroup fx:id="appointmentRadioButtonGroup" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="viewByWeekRadioButton" mnemonicParsing="false" onAction="#viewByWeekHandler" text="View upcoming appointments by week" toggleGroup="$appointmentRadioButtonGroup" />
+         </children>
+      </HBox>
+      <TableView fx:id="appointmentTableView" layoutX="40.0" layoutY="92.0" prefHeight="516.0" prefWidth="1121.0">
+        <columns>
+          <TableColumn fx:id="customerNameColumn" prefWidth="129.0" text="Customer Name" />
+          <TableColumn fx:id="customerContactColumn" prefWidth="120.0" text="Assigned Contact" />
+            <TableColumn fx:id="appointmentTitleColumn" prefWidth="87.0" text="Title" />
+            <TableColumn fx:id="appointmentTypeColumn" prefWidth="83.0" text="Type" />
+            <TableColumn fx:id="appointmentLocationColumn" prefWidth="178.0" text="Location" />
+            <TableColumn fx:id="appointmentDescriptionColumn" prefWidth="218.0" text="Description" />
+            <TableColumn fx:id="appointmentStartColumn" prefWidth="153.0" text="Start" />
+            <TableColumn fx:id="appointmentEndColumn" prefWidth="153.0" text="End" />
+        </columns>
+      </TableView>
+      <Button fx:id="backButton" layoutX="1095.0" layoutY="632.0" mnemonicParsing="false" onAction="#backHandler" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="modifyAppointmentButton" layoutX="899.0" layoutY="632.0" mnemonicParsing="false" onAction="#modifyAppointmentHandler" text="MODIFY">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteAppointmentButton" layoutX="1001.0" layoutY="632.0" mnemonicParsing="false" onAction="#deleteAppointmentHandler" text="DELETE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="40.0" layoutY="639.0" text="View By:" />
+      <ComboBox fx:id="viewByComboBox" layoutX="91.0" layoutY="635.0" prefHeight="25.0" prefWidth="245.0" promptText="Select a value to sort the calendar" />
+      <Button fx:id="searchTableSorterButton" layoutX="355.0" layoutY="635.0" mnemonicParsing="false" onAction="#searchTableSorterHandler" text="Search" />
+      <Label layoutX="14.0" layoutY="58.0" text="NOTE: All appointments are shown by default. To filter the appointment results please select from the radio buttons above then select your viewing filter below." />
+   </children>
+</AnchorPane>
